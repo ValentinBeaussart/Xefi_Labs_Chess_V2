@@ -14,7 +14,6 @@ class PlayersController < ApplicationController
   def create
     @player = Player.new(player_params)
     @player.user = current_user
-
   end
 
   private
