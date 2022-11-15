@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first
 puts "Cleaning db"
-User.destroy_all
-Player.destroy_all
+# User.destroy_all
+# Player.destroy_all
 
 val = User.create!(
   id: 1,
@@ -20,7 +20,26 @@ toto = Player.create!(
   position: 1,
   victory: 1,
   defeat: 1,
-  user_id: 1
+  user_id: 1,
+  point: 0
+)
+
+titi = Player.create!(
+  name: "Valentin",
+  position: 1,
+  victory: 3,
+  defeat: 1,
+  user_id: 1,
+  point: 8
+)
+
+tata = Player.create!(
+  name: "Valentin",
+  position: 1,
+  victory: 4,
+  defeat: 1,
+  user_id: 1,
+  point: 2
 )
 
 puts "#{User.count} user were created"

@@ -7,15 +7,17 @@
       <th scope="col">Joueur</th>
       <th scope="col">Victoire</th>
       <th scope="col">Défaite</th>
+      <th scope="col">Score</th>
     </tr>
   </thead>
   <tbody>
     <tr>
     <% @players.each do |player| %>
       <th scope="row"><%= player.position %></th>
-      <td> <%= player.name %> </td>
+      <td><%= player.name %></td>
       <td><%= player.victory %></td>
       <td><%= player.defeat %></td>
+      <td><%= player.point %></td>
     </tr>
       <% end %>
   </tbody>

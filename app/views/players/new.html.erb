@@ -1,0 +1,6 @@
+<div class="form-lists">
+<%= simple_form_for @player, html: { autocomplete: 'off' } do |f| %>
+  <%= f.input :name, label: "Je souhaite l'appeler.."%>
+  <%= f.button :submit, "Je l'ajoute", placeholder: 'Intermarché...'%>
+<% end %>
+</div>

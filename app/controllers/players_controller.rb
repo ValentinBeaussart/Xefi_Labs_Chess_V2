@@ -1,6 +1,12 @@
 class PlayersController < ApplicationController
   def index
-    @players = Player.where(user: current_user)
+
+      @players  = Player.all
+       @players.map do |score|
+     score[:point] = score[:victory] - score[:defeat]
+    #  @players.order(point: :asc)
+    end
+    # @players.order(point: :asc)
   end
 
   def show
@@ -16,9 +22,12 @@ class PlayersController < ApplicationController
     @player.user = current_user
   end
 
+  def scoring
+
+  end
   private
 
   def player_params
-    params.require(:player).permit(:name, :position, :victory, :defeat)
+    params.require(:player).permit(:name, :position, :victory, :defeat, :point)
   end
 end
