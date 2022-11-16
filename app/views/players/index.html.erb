@@ -1,4 +1,5 @@
 <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
+<%= link_to "Login", new_user_session_path %>
 <table class="table table-hover">
     <thead>
     <tr>
@@ -18,6 +19,42 @@
       <td class="table-success"><%= player.victory %></td>
       <td class="table-success"><%= player.defeat %></td>
       <td class="table-success"><%= player.point %></td>
+      <% elsif player.position == 2 %>
+      <th class="table-success" scope="row"><%= player.position %></th>
+      <td class="table-success"><%= link_to "#{player.name}", player, method: :show %></td>
+      <td class="table-success"><%= player.victory %></td>
+      <td class="table-success"><%= player.defeat %></td>
+      <td class="table-success"><%= player.point %></td>
+      <% elsif player.position == 3 %>
+      <th class="table-success" scope="row"><%= player.position %></th>
+      <td class="table-success"><%= link_to "#{player.name}", player, method: :show %></td>
+      <td class="table-success"><%= player.victory %></td>
+      <td class="table-success"><%= player.defeat %></td>
+      <td class="table-success"><%= player.point %></td>
+      <% elsif player.position == 4 %>
+      <th class="table-success" scope="row"><%= player.position %></th>
+      <td class="table-success"><%= link_to "#{player.name}", player, method: :show %></td>
+      <td class="table-success"><%= player.victory %></td>
+      <td class="table-success"><%= player.defeat %></td>
+      <td class="table-success"><%= player.point %></td>
+      <% elsif player.position == 5 %>
+      <th class="table-danger" scope="row"><%= player.position %></th>
+      <td class="table-danger"><%= link_to "#{player.name}", player, method: :show %></td>
+      <td class="table-danger"><%= player.victory %></td>
+      <td class="table-danger"><%= player.defeat %></td>
+      <td class="table-danger"><%= player.point %></td>
+      <% elsif player.position == 6 %>
+      <th class="table-danger" scope="row"><%= player.position %></th>
+      <td class="table-danger"><%= link_to "#{player.name}", player, method: :show %></td>
+      <td class="table-danger"><%= player.victory %></td>
+      <td class="table-danger"><%= player.defeat %></td>
+      <td class="table-danger"><%= player.point %></td>
+      <% elsif player.position == 7 %>
+      <th class="table-danger" scope="row"><%= player.position %></th>
+      <td class="table-danger"><%= link_to "#{player.name}", player, method: :show %></td>
+      <td class="table-danger"><%= player.victory %></td>
+      <td class="table-danger"><%= player.defeat %></td>
+      <td class="table-danger"><%= player.point %></td>
       <% elsif player.position == 8 %>
       <th class="table-danger" scope="row"><%= player.position %></th>
       <td class="table-danger"><%= link_to "#{player.name}", player, method: :show %></td>
@@ -26,12 +63,10 @@
       <td class="table-danger"><%= player.point %></td>
       <% else %>
       <th scope="row"><%= player.position %></th>
-
-      <td><%= link_to "#{player.name}", player, method: :show %></td>
+      <td><%= link_to "#{player.name}", player, method: :show, class: "toto" %></td>
       <td><%= player.victory %></td>
       <td><%= player.defeat %></td>
       <td><%= player.point %></td>
-      <td></td>
       <% end %>
     </tr>
       <% end %>
