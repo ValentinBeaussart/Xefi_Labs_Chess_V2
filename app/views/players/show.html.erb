@@ -1,0 +1,7 @@
+<%= simple_form_for @player, html: { autocomplete: 'off' } do |f| %>
+  <%= f.input :name, label: "Nom"%>
+  <%= f.input :victory, label: "Victoire"%>
+  <%= f.input :defeat, label: "Défaite"%>
+
+  <%= f.button :submit, "Je l'ajoute", placeholder: 'Intermarché...'%>
+<% end %>

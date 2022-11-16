@@ -14,22 +14,24 @@
     <% @players.each do |player| %>
     <% if player.position == 1 %>
       <th class="table-success" scope="row"><%= player.position %></th>
-      <td class="table-success"><%= player.name %></td>
+      <td class="table-success"><%= link_to "#{player.name}", player, method: :show %></td>
       <td class="table-success"><%= player.victory %></td>
       <td class="table-success"><%= player.defeat %></td>
       <td class="table-success"><%= player.point %></td>
       <% elsif player.position == 8 %>
       <th class="table-danger" scope="row"><%= player.position %></th>
-      <td class="table-danger"><%= player.name %></td>
+      <td class="table-danger"><%= link_to "#{player.name}", player, method: :show %></td>
       <td class="table-danger"><%= player.victory %></td>
       <td class="table-danger"><%= player.defeat %></td>
       <td class="table-danger"><%= player.point %></td>
       <% else %>
       <th scope="row"><%= player.position %></th>
-      <td><%= player.name %></td>
+
+      <td><%= link_to "#{player.name}", player, method: :show %></td>
       <td><%= player.victory %></td>
       <td><%= player.defeat %></td>
       <td><%= player.point %></td>
+      <td></td>
       <% end %>
     </tr>
       <% end %>
