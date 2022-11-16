@@ -16,30 +16,67 @@ val = User.create!(
 )
 
 toto = Player.create!(
-  name: "Valentin",
+  name: "Romin",
   position: 1,
-  victory: 1,
+  victory: 2,
   defeat: 1,
   user_id: 1,
-  point: 0
 )
 
 titi = Player.create!(
-  name: "Valentin",
-  position: 1,
+  name: "Mohammed",
+  position: 2,
   victory: 3,
-  defeat: 1,
+  defeat: 4,
   user_id: 1,
-  point: 8
+)
+
+tata = Player.create!(
+  name: "Alizée la mauvaise perdante",
+  position: 3,
+  victory: 54,
+  defeat: 55,
+  user_id: 1,
 )
 
 tata = Player.create!(
   name: "Valentin",
-  position: 1,
-  victory: 4,
+  position: 4,
+  victory: 8,
   defeat: 1,
   user_id: 1,
-  point: 2
+)
+
+tata = Player.create!(
+  name: "Mathis",
+  position: 5,
+  victory: 0,
+  defeat: 1,
+  user_id: 1,
+)
+
+tata = Player.create!(
+  name: "Tanguy",
+  position: 6,
+  victory: 67,
+  defeat: 1,
+  user_id: 1,
+)
+
+tata = Player.create!(
+  name: "Cécile",
+  position: 7,
+  victory: 1,
+  defeat: 1,
+  user_id: 1,
+)
+
+tata = Player.create!(
+  name: "Cécile",
+  position: 8,
+  victory: 1,
+  defeat: 1,
+  user_id: 1,
 )
 
 puts "#{User.count} user were created"

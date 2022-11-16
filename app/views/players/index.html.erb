@@ -1,5 +1,4 @@
 <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
-
 <table class="table table-hover">
     <thead>
     <tr>
@@ -13,11 +12,25 @@
   <tbody>
     <tr>
     <% @players.each do |player| %>
+    <% if player.position == 1 %>
+      <th class="table-success" scope="row"><%= player.position %></th>
+      <td class="table-success"><%= player.name %></td>
+      <td class="table-success"><%= player.victory %></td>
+      <td class="table-success"><%= player.defeat %></td>
+      <td class="table-success"><%= player.point %></td>
+      <% elsif player.position == 8 %>
+      <th class="table-danger" scope="row"><%= player.position %></th>
+      <td class="table-danger"><%= player.name %></td>
+      <td class="table-danger"><%= player.victory %></td>
+      <td class="table-danger"><%= player.defeat %></td>
+      <td class="table-danger"><%= player.point %></td>
+      <% else %>
       <th scope="row"><%= player.position %></th>
       <td><%= player.name %></td>
       <td><%= player.victory %></td>
       <td><%= player.defeat %></td>
       <td><%= player.point %></td>
+      <% end %>
     </tr>
       <% end %>
   </tbody>
