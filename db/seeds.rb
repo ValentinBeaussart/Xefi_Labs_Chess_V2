@@ -18,8 +18,8 @@ val = User.create!(
 toto = Player.create!(
   name: "Romin",
   position: 1,
-  victory: 2,
-  defeat: 1,
+  victory: 5,
+  defeat: 0,
   user_id: 1,
 )
 
@@ -27,22 +27,22 @@ titi = Player.create!(
   name: "Mohammed",
   position: 2,
   victory: 3,
-  defeat: 4,
+  defeat: 1,
   user_id: 1,
 )
 
 tata = Player.create!(
   name: "Alizée la mauvaise perdante",
   position: 3,
-  victory: 54,
-  defeat: 55,
+  victory: 2,
+  defeat: 1,
   user_id: 1,
 )
 
 tata = Player.create!(
   name: "Valentin",
   position: 4,
-  victory: 8,
+  victory: 2,
   defeat: 1,
   user_id: 1,
 )
@@ -50,32 +50,32 @@ tata = Player.create!(
 tata = Player.create!(
   name: "Mathis",
   position: 5,
-  victory: 0,
-  defeat: 1,
+  victory: 1,
+  defeat: 4,
   user_id: 1,
 )
 
 tata = Player.create!(
   name: "Tanguy",
   position: 6,
-  victory: 67,
-  defeat: 1,
+  victory: 1,
+  defeat: 3,
   user_id: 1,
 )
 
 tata = Player.create!(
   name: "Cécile",
   position: 7,
-  victory: 1,
-  defeat: 1,
+  victory: 0,
+  defeat: 0,
   user_id: 1,
 )
 
 tata = Player.create!(
-  name: "Cécile",
+  name: "Robin",
   position: 8,
   victory: 1,
-  defeat: 1,
+  defeat: 5,
   user_id: 1,
 )
 
