@@ -3,10 +3,11 @@
     <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Joueur</th>
-      <th scope="col">Victoire</th>
-      <th scope="col">Défaite</th>
+      <th scope="col">Joueurs</th>
+      <th scope="col">V</th>
+      <th scope="col">D</th>
       <th scope="col">Score</th>
+      <th scope="col">MJ</th>
     </tr>
   </thead>
   <tbody>
@@ -18,54 +19,72 @@
       <td class="table-success"><%= player.victory %></td>
       <td class="table-success"><%= player.defeat %></td>
       <td class="table-success"><%= player.point %></td>
+            <td class="table-success"><%= player.played_match %></td>
+
       <% elsif player.position == 2 %>
       <th class="table-success" scope="row"><%= player.position %></th>
       <td class="table-success"><%= link_to "#{player.name}", player, method: :show %></td>
       <td class="table-success"><%= player.victory %></td>
       <td class="table-success"><%= player.defeat %></td>
       <td class="table-success"><%= player.point %></td>
+            <td class="table-success"><%= player.played_match %></td>
+
       <% elsif player.position == 3 %>
       <th class="table-success" scope="row"><%= player.position %></th>
       <td class="table-success"><%= link_to "#{player.name}", player, method: :show %></td>
       <td class="table-success"><%= player.victory %></td>
       <td class="table-success"><%= player.defeat %></td>
       <td class="table-success"><%= player.point %></td>
+            <td class="table-success"><%= player.played_match %></td>
+
       <% elsif player.position == 4 %>
       <th class="table-success" scope="row"><%= player.position %></th>
       <td class="table-success"><%= link_to "#{player.name}", player, method: :show %></td>
       <td class="table-success"><%= player.victory %></td>
       <td class="table-success"><%= player.defeat %></td>
       <td class="table-success"><%= player.point %></td>
+            <td class="table-success"><%= player.played_match %></td>
+
       <% elsif player.position == 5 %>
       <th class="table-danger" scope="row"><%= player.position %></th>
       <td class="table-danger"><%= link_to "#{player.name}", player, method: :show %></td>
       <td class="table-danger"><%= player.victory %></td>
       <td class="table-danger"><%= player.defeat %></td>
       <td class="table-danger"><%= player.point %></td>
+            <td class="table-danger"><%= player.played_match %></td>
+
       <% elsif player.position == 6 %>
       <th class="table-danger" scope="row"><%= player.position %></th>
       <td class="table-danger"><%= link_to "#{player.name}", player, method: :show %></td>
       <td class="table-danger"><%= player.victory %></td>
       <td class="table-danger"><%= player.defeat %></td>
       <td class="table-danger"><%= player.point %></td>
+            <td class="table-danger"><%= player.played_match %></td>
+
       <% elsif player.position == 7 %>
       <th class="table-danger" scope="row"><%= player.position %></th>
       <td class="table-danger"><%= link_to "#{player.name}", player, method: :show %></td>
       <td class="table-danger"><%= player.victory %></td>
       <td class="table-danger"><%= player.defeat %></td>
       <td class="table-danger"><%= player.point %></td>
+            <td class="table-danger"><%= player.played_match %></td>
+
       <% elsif player.position == 8 %>
       <th class="table-danger" scope="row"><%= player.position %></th>
       <td class="table-danger"><%= link_to "#{player.name}", player, method: :show %></td>
       <td class="table-danger"><%= player.victory %></td>
       <td class="table-danger"><%= player.defeat %></td>
       <td class="table-danger"><%= player.point %></td>
+            <td class="table-danger"><%= player.played_match %></td>
+
       <% else %>
       <th scope="row"><%= player.position %></th>
       <td><%= link_to "#{player.name}", player, method: :show, class: "toto" %></td>
       <td><%= player.victory %></td>
       <td><%= player.defeat %></td>
       <td><%= player.point %></td>
+            <td><%= player.played_match %></td>
+
       <% end %>
     </tr>
       <% end %>

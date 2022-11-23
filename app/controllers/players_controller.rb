@@ -1,7 +1,9 @@
 class PlayersController < ApplicationController
   def index
     @players = Player.all.each do |v|
-      v[:point] = v[:victory] - v[:defeat] end.sort_by { |a| a[:point] }.reverse
+      v[:point] = v[:victory] - v[:defeat] end.sort_by { |a| a[:point] }.reverse.each do |t|
+          t[:played_match] = t[:victory] + t[:defeat]
+      end
   end
 
   def edit
